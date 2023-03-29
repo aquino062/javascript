@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checador de notas</title>
+</head>
+
+<body>
+    <h1>Checador de Notas do Aluno</h1>
+    <input type="number" name="n1" id="n1">
+    <input type="button" value="checar" onclick="checar()">
+    <div id="res"></div>
+    <script>
+
+        function checar() {
+            var n1 = document.querySelector("input#n1")
+            var res = document.querySelector("div#res")
+            var nota = Number(n1.value)
+            res.innerHTML += `</p>Sua nota é: ${nota}</p>`
+            if (nota >= 6) {
+                res.innerHTML += `Parabéns! <strong>Você Passou de ano.</strong>`
+            } else {
+               res.innerHTML += `Você Foi <strong>Reprovado!</strong>`
+            }
+        }
+    </script>
+</body>
+
+</html>
